@@ -1,131 +1,107 @@
-Campus Placement Data Analysis & Salary Prediction
-📌 Project Overview
+# Campus Placement Data Analysis & Salary Prediction
 
-This project analyzes campus placement data to identify salary trends and key factors influencing compensation outcomes across companies, regions, and academic years. It covers the complete data analysis workflow, including data cleaning, exploratory data analysis (EDA), and baseline predictive modeling for salary estimation.
+## 📌 Project Overview
 
-The emphasis is on data quality, insight generation, and model interpretability using real-world placement records.
+This project analyzes campus placement data to uncover salary trends and identify key factors influencing compensation outcomes across companies, regions, and academic years. It demonstrates an end-to-end data science workflow, combining data cleaning, exploratory data analysis (EDA), and regression-based modeling to generate practical, data-driven insights.
 
-🎯 Objectives
+The project emphasizes real-world data handling, insight extraction, and interpretable modeling rather than purely theoretical analysis.
 
-Analyze salary distributions in campus placements
+---
 
-Identify factors influencing placement salary outcomes
+## 🎯 Objectives
 
-Build and compare baseline and tree-based regression models
+- Analyze salary distributions and trends in campus placements  
+- Identify key drivers influencing placement salaries  
+- Build and compare baseline and tree-based regression models  
+- Interpret results to derive actionable insights from placement data  
 
-Interpret model results in a real-world campus hiring context
+---
 
-📊 Dataset
+## 📊 Dataset
 
-Campus placement dataset containing 200+ records
+- Campus placement dataset with **200+ records**
 
-Key attributes:
+### Key Attributes
+- Recruiting Company  
+- College  
+- Placement Region  
+- Placement Year  
+- Salary (raw text format with currency symbols)  
 
-name_of_company — Recruiting organization
+> Salary values required preprocessing due to inconsistent formatting and noise.
 
-college_name — Institution where placement occurred
+---
 
-region — Placement location
+## 🧹 Data Preprocessing
 
-year — Placement year
+- Standardized column names for consistency  
+- Cleaned salary values by removing currency symbols and text artifacts  
+- Converted relevant fields to numeric formats  
+- Removed incomplete and invalid records  
 
-salary — Offered salary (raw text format with currency symbols)
+These steps ensured high-quality data suitable for analysis and modeling.
 
-The salary field required preprocessing due to inconsistent formatting and text noise.
+---
 
-🧹 Data Preparation
+## 📈 Exploratory Data Analysis (EDA)
 
-Key preprocessing steps:
+Key analyses included:
 
-Standardized column names for consistency
+- Salary distribution across placements  
+- Regional comparison of average salary offers  
+- Identification of top recruiting companies  
+- Salary trends across multiple placement years  
 
-Cleaned salary values by removing currency symbols and text artifacts
+EDA provided valuable context and insights prior to model development.
 
-Converted relevant fields to numeric formats
+---
 
-Removed incomplete and invalid records
+## 🤖 Modeling Approach
 
-These steps ensured the dataset was suitable for analysis and modeling.
+### Baseline Model
+- **Linear Regression**
+- Established a baseline for salary prediction performance  
 
-📈 Exploratory Data Analysis (EDA)
+### Improved Model
+- **Random Forest Regressor**
+- Captured non-linear relationships between features  
+- Improved predictive performance and interpretability  
 
-The analysis focused on:
+---
 
-Distribution of salary offers
+## 📏 Evaluation Metrics
 
-Average salary comparison across regions
+- Mean Absolute Error (MAE)  
+- R² Score  
 
-Identification of top recruiting companies
+---
 
-Salary trends across multiple placement years
+## 🔑 Key Insights
 
-EDA insights helped explain observed salary variations prior to model building.
+- Recruiting company and region are the strongest predictors of salary  
+- Salary distributions vary significantly across regions  
+- Tree-based models outperform linear baselines for real-world salary data  
 
-🤖 Modeling Approach
-Baseline Model
+---
 
-Linear Regression
+## 🛠 Tools & Technologies
 
-Used to establish a performance baseline
+- Python  
+- Pandas  
+- NumPy  
+- Matplotlib  
+- Scikit-learn  
 
-Limited effectiveness due to categorical features and non-linear patterns
+---
 
-Improved Model
+## ⚠ Limitations & Future Work
 
-Random Forest Regressor
+- Academic performance and skill-level features were unavailable  
+- Inclusion of internship experience and role-level data could improve results  
+- Advanced encoding and feature engineering may further enhance performance  
 
-Better captured non-linear relationships and feature interactions
+---
 
-Improved predictive performance and interpretability
+## ✅ Summary
 
-Aligned more closely with real-world placement behavior
-
-📏 Evaluation Metrics
-
-Model performance was evaluated using:
-
-Mean Absolute Error (MAE)
-
-R² Score
-
-🔑 Feature Importance Insights
-
-Feature importance analysis from the Random Forest model indicated:
-
-Recruiting company and region had the strongest influence on salary
-
-College and placement year showed secondary effects
-
-These findings align with common campus hiring patterns.
-
-📌 Key Observations
-
-A small number of companies account for a large share of campus hiring
-
-Salary offers vary significantly across regions
-
-Linear models struggle with placement salary prediction
-
-Tree-based models better capture real-world salary structures
-
-🛠 Tools & Technologies
-
-Python
-
-Pandas
-
-Matplotlib
-
-Scikit-learn
-
-⚠ Limitations & Future Work
-
-Academic performance metrics (CGPA) were unavailable
-
-Internship experience and skill-level data could improve predictions
-
-Advanced encoding techniques may further enhance model performance
-
-✅ Summary
-
-This project demonstrates an end-to-end data analysis and machine learning workflow using real-world campus placement data. It highlights the importance of data preprocessing, exploratory analysis, and model interpretation when addressing practical salary prediction problems.
+This project highlights the practical application of data science techniques to real-world placement data, focusing on data quality, exploratory analysis, and interpretable modeling to extract meaningful insights.
